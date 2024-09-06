@@ -1,22 +1,25 @@
-import { View, Text } from 'react-native';
 import { Link, Stack } from 'expo-router';
 import { StyleSheet } from 'react-native';
 
+import ThemedView from '@/components/ThemedView';
+import ThemedText from '@/components/ThemedText';
+
 export default function App() {
   return (
-    <View style={styles.container}>
+    <ThemedView style={styles.container}>
+      <ThemedView level={2}>
+  			<ThemedText type="title">App</ThemedText>      
+      </ThemedView>
 			
-			<Text type="title">App</Text>
-			
-			<Link href="login" style={styles.link}>
-				<Text type="link">Log in</Text>
+			<Link href="/login" style={styles.link}>
+				<ThemedText type="link">Log in</ThemedText>
 			</Link>
 				
-			<Link href="register" style={styles.link}>
-				<Text type="link">Register</Text>
+			<Link href="/register" style={styles.link}>
+				<ThemedText type="link">Register</ThemedText>
 			</Link>
 			 
-    </View>
+    </ThemedView>
   );
 }
 
@@ -27,9 +30,9 @@ export default function App() {
     justifyContent: 'center',
     padding: 20,
   },
-	/*
+	
   link: {
-    paddingVertical: 15,
+    //paddingVertical: 15,
   },
-	*/
+	
 });
