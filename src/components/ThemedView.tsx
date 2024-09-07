@@ -2,19 +2,25 @@ import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import { useTheme } from '@/theme';
 
-export default function ThemedView(props: { style?: any; level?: number | undefined; children: any; }) {
-    const { style, level = 1, children } = props;
+
+type ThemedViewProps = {
+	style?: {};
+	elevation?: number; 
+	children?: any;
+}
+
+export default function ThemedView( props : ThemedViewProps) {
+const { style, elevation = 0, children } = props;
     
     const { colors } = useTheme();
-    
-
-    function levelBackgroundColor(level: number) {
-        switch (level) {
-            case 1:
+   
+    function getColorFromElevation(elevation: number) {
+        switch (elevation) {
+            case 0:
                 return colors.background;
-            case 2:
+            case 1:
                 return colors.backgroundSecondary;
-            case 3:
+            case 2:
                 return colors.backgroundTertiary;
             default:
                 return colors.label;
@@ -22,7 +28,7 @@ export default function ThemedView(props: { style?: any; level?: number | undefi
     }
 
     return (
-        <View style={{ ...{ backgroundColor: levelBackgroundColor(level) }, ...styles.view, ...style }}>
+        <View style={{ ...{ backgroundColor: getColorFromElevation(elevation) }, ...styles.view, ...style }}>
             {children}
         </View>
     );

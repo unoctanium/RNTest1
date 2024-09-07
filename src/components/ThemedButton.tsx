@@ -2,11 +2,21 @@ import React from 'react';
 import { StyleSheet, Pressable } from 'react-native';
 import ThemedText from '@/components/ThemedText'
 
-export default function ThemedButton(props: { onPress: any; title?: string | undefined; style?: any; styleText?: any; }) {
-  const { onPress, title = 'Ok', style, styleText } = props;
+
+type ThemedButtonProps = {
+	onPress: () => {};
+	type?: string;
+	style?: {};
+	labelStyle?: {}; 
+	children?: any;
+}
+
+
+export default function ThemedButton(props: ThemedButtonProps) {
+  const { onPress, title = 'Ok', style, labelStyle, type = '' } = props;
   return (
     <Pressable style={{ ...styles.pressable, ...style }} onPress={onPress}>
-      <ThemedText style={{ ...styles.text, ...styleText }}>
+      <ThemedText style={{ ...styles.label, ...labelStyle }}>
         {title}
       </ThemedText>
     </Pressable>
@@ -24,7 +34,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'blue',
     opacity:1,
   },
-  text: {
+  label: {
     fontSize: 16,
     lineHeight: 21,
     fontWeight: 'bold',

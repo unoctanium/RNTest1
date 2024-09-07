@@ -7,7 +7,7 @@ import ThemedText from '@/components/ThemedText';
 export default function App() {
   return (
     <ThemedView style={styles.container}>
-      <ThemedView level={2}>
+      <ThemedView elevation={1}>
   			<ThemedText type="title">App</ThemedText>      
       </ThemedView>
 			
