@@ -1,9 +1,10 @@
-import { View, Text } from 'react-native'
 import React from 'react'
+import { View, Text, Button } from 'react-native'
 import { useNavigation } from 'expo-router'
 import { DrawerActions } from '@react-navigation/native';
 
-import ThemedButton from '@/components/ThemedButton'
+import { ThemedButton, BasicButton } from '@/components/buttons'
+import ThemedText from '@/components/ThemedText';
 
 export default function Notifications() {
     const navigation = useNavigation();
@@ -15,7 +16,16 @@ export default function Notifications() {
   return (
     <View>
       <Text>Notifications</Text>
-      <ThemedButton title="open drawer" onPress={openDrawer}/>
+      <Button title="Hallo"/>
+      <ThemedButton onPress={openDrawer}>
+        open drawer  
+      </ThemedButton>
+      <BasicButton style={{ backgroundColor: 'red' }}>
+        <ThemedText>lalala</ThemedText>
+      </BasicButton>
+      <BasicButton>
+        <ThemedText>lalala</ThemedText>
+      </BasicButton>
     </View>
   )
 }

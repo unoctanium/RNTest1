@@ -7,7 +7,7 @@ import ThemedText from '@/components/ThemedText';
 export default function Member() {
   return (
     <ThemedView>
-      <ThemedView level={2}>
+      <ThemedView elevation={2}>
         <ThemedText>Member Home</ThemedText>
       </ThemedView>
 

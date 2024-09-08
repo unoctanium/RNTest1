@@ -4,8 +4,8 @@ import ThemedText from '@/components/ThemedText'
 
 
 type ThemedButtonProps = {
-	onPress: () => {};
-	type?: string;
+  onPress?: () => void;
+  title?: string;
 	style?: {};
 	labelStyle?: {}; 
 	children?: any;
@@ -13,11 +13,11 @@ type ThemedButtonProps = {
 
 
 export default function ThemedButton(props: ThemedButtonProps) {
-  const { onPress, title = 'Ok', style, labelStyle, type = '' } = props;
+  const { onPress, style, labelStyle, children} = props;
   return (
     <Pressable style={{ ...styles.pressable, ...style }} onPress={onPress}>
       <ThemedText style={{ ...styles.label, ...labelStyle }}>
-        {title}
+        {children}
       </ThemedText>
     </Pressable>
   );

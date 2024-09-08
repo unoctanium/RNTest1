@@ -69,6 +69,10 @@ export const lightColors = {
     tabUnselected: '#999999',
     textFieldBG: '#FFFFFF',
     textFieldOutline: '#3C3C434a',
+
+    // Own
+    buttonPrimaryBackground: '#2196F3',
+
 };
 
 // Dark theme colors
@@ -142,6 +146,10 @@ export const darkColors = {
     tabUnselected: '#7E7E7E',
     textFieldBG: '#000000',
     textFieldOutline: '#EBEB5F4D',
+
+    // Own
+    buttonPrimaryBackground: '#2196F3',
+    
 };
 
 
