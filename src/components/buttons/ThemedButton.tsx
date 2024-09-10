@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Pressable } from 'react-native';
-import ThemedText from '@/components/ThemedText'
+import { ThemedText }  from '@/components/text'
 
 
 type ThemedButtonProps = {

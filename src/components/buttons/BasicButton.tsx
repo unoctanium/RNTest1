@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, Pressable, PressableProps } from 'react-native';
-import { useTheme } from '@/theme';
+//import { useTheme } from '@/theme';
+import { useTheme } from '@react-navigation/native';
 
 type BasicButtonProps = PressableProps & {
   style?: any;
@@ -13,7 +14,7 @@ const BasicButton = ({ style, onPress, ...rest }: BasicButtonProps) => {
 
   return (
     <Pressable
-      style={{ backgroundColor:colors.buttonPrimaryBackground, ...styles.pressable, ...style }}
+      style={{ backgroundColor:colors.primary, ...styles.pressable, ...style }}
       onPress={onPress}
       {...rest}
     />

@@ -1,20 +1,44 @@
 import { Stack, useRouter } from 'expo-router';
 import { View, Button, Image } from 'react-native';
 import { StyleSheet } from 'react-native';
-import { ThemeProvider, useTheme } from '@/theme';
+import { useColorScheme } from 'react-native';
+import {
+	ThemeProvider,
+	//DarkTheme,
+	//DefaultTheme,
+	useTheme
+} from '@react-navigation/native';
+import { lightTheme, darkTheme } from '@/theme/theme';
+
+
+export default function RootLayout() {
+
+	const scheme = useColorScheme();
+
+	return (
+		
+		<ThemeProvider value={scheme === 'dark' ? darkTheme : lightTheme}>
+			<CustomStackContent />
+		</ThemeProvider>
+	
+	);
+}
+
 
 function CustomStackContent() {
 
 	const router = useRouter();
-	const { colors } = useTheme();
+	//const { colors } = useTheme();
 
 	return (
 		<>
 			<Stack
+				/*
 				screenOptions={{
-					headerStyle: { backgroundColor: colors.backgroundSecondary },
-					headerTintColor: colors.orange,
+					///headerStyle: { backgroundColor: colors.backgroundSecondary },
+					///headerTintColor: colors.orange,
 				}}
+				*/
 			>
 				<Stack.Screen name="index" options={{
 					headerTitle: 'Home',
@@ -29,8 +53,8 @@ function CustomStackContent() {
 						/>
 					</View>,
 					headerRight: () => <View style={styles.hstack}>
-						<Button title="Register" onPress={() => router.navigate('register')} />
-						<Button title="Log in" onPress={() => router.navigate('login')} />
+						<Button title="Register" onPress={() => router.navigate('/register')} />
+						<Button title="Log in" onPress={() => router.navigate('/login')} />
 					</View>
 				}}
 				/>
@@ -76,30 +100,8 @@ const styles = StyleSheet.create({
 		justifyContent: 'center',
 		padding: 20,
 	},
-	/*
-	button: {
-		marginHorizontal: 10,
-	}
-	*/
-	/*
-  link: {
-	paddingVertical: 15,
-  },
-	*/
 });
 
 
 
-
-
-export default function RootLayout() {
-
-	return (
-		<>
-			<ThemeProvider>
-				<CustomStackContent />
-			</ThemeProvider>
-		</>
-	);
-}
 

@@ -4,7 +4,7 @@ import { useNavigation } from 'expo-router'
 import { DrawerActions } from '@react-navigation/native';
 
 import { ThemedButton, BasicButton } from '@/components/buttons'
-import ThemedText from '@/components/ThemedText';
+import { ThemedText } from '@/components/text';
 
 export default function Notifications() {
     const navigation = useNavigation();

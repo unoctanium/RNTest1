@@ -1,7 +1,79 @@
+export type TColors =  {
+    //background: string;
+    backgroundSecondary: string;
+    backgroundTertiary: string;
+    backgroundGroup: string;
+    backgroundGroupSecondary: string;
+    backgroundGroupTertiary: string;
+    
+    // Colors
+    red: string;
+    orange: string;
+    yellow: string;
+    green: string;
+    mint: string;
+    teal: string;
+    cyan: string;
+    blue: string;
+    indigo: string;
+    purple: string;
+    pink: string;
+    brown: string;
+    
+    // Fills
+    fill: string;
+    fillSecondary: string;
+    fillTertiary: string;
+    fillQuarternary: string;
+    
+    // Grays
+    black: string;
+    white: string;
+    gray: string;
+    gray2: string;
+    gray3: string;
+    gray4: string;
+    gray5: string;
+    gray6: string;
+
+    // Labels
+    label: string;
+    labelSecondary: string;
+    labelTertiary: string;
+    labelQuarternary: string;
+
+    // Overlays:
+    overlay: string;
+    overlaySecondary: string;
+
+    // Separators
+    separator: string;
+    separatorTransparent: string;
+
+    // Miscellaneous
+    sheet: string;
+    barBorder: string;
+    buttonDisabledBG: string;
+    buttonBezeledFill: string;
+    floatingTabTextSelected: string;
+    floatingTabTextUnselected: string;
+    floatingTabPillShadow: string;
+    floatingTabPillFill: string;
+    menuLargeSeparator: string;
+    sidebarFillSelected: string;
+    sidebarFillDragOver: string;
+    sidebarTextSelected: string;
+    sidebarShadowDragOver: string;
+    tabUnselected: string;
+    textFieldBG: string;
+    textFieldOutline: string;
+}
+
+
 // Light theme colors
 export const lightColors = {
     // Backgrounds
-    background: '#FFFFFF',
+    //background: '#FFFFFF',
     backgroundSecondary: '#F2F2F7',
     backgroundTertiary: '#FFFFFF',
     backgroundGroup: '#F2F2F7',
@@ -71,14 +143,14 @@ export const lightColors = {
     textFieldOutline: '#3C3C434a',
 
     // Own
-    buttonPrimaryBackground: '#2196F3',
+    //buttonPrimaryBackground: '#2196F3',
 
 };
 
 // Dark theme colors
 export const darkColors = {
     // Backgrounds
-    background: '#000000',
+    //background: '#000000',
     backgroundSecondary: '#1C1C1E',
     backgroundTertiary: '#2C2C2E',
     backgroundGroup: '#000000',
@@ -148,7 +220,7 @@ export const darkColors = {
     textFieldOutline: '#EBEB5F4D',
 
     // Own
-    buttonPrimaryBackground: '#2196F3',
+    //buttonPrimaryBackground: '#2196F3',
     
 };
 

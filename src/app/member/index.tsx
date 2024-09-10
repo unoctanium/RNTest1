@@ -1,8 +1,8 @@
 import { Image } from 'react-native';
 import Ionicons from '@expo/vector-icons/Ionicons';
 
-import ThemedView from '@/components/ThemedView';
-import ThemedText from '@/components/ThemedText';
+import { ThemedView } from '@/components/view';
+import { ThemedText } from '@/components/text';
 
 export default function Member() {
   return (

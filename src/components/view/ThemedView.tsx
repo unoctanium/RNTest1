@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
-import { useTheme } from '@/theme';
+//import { useTheme } from '@/theme';
+import { useTheme } from '@react-navigation/native';
 
 
 type ThemedViewProps = {
@@ -16,14 +17,16 @@ const { style, elevation = 0, children } = props;
    
     function getColorFromElevation(elevation: number) {
         switch (elevation) {
+            /*
             case 0:
                 return colors.background;
             case 1:
                 return colors.backgroundSecondary;
             case 2:
                 return colors.backgroundTertiary;
+                */
             default:
-                return colors.label;
+                return colors.background;
         }
     }
 
