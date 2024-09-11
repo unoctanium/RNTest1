@@ -5,6 +5,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import { useNavigation } from 'expo-router';
 import { DrawerActions } from '@react-navigation/native';
 import Ionicons from '@expo/vector-icons/Ionicons';
+import { useTheme } from '@react-navigation/native';
 
 
 
@@ -13,7 +14,7 @@ export default function MemberLayout() {
 	const dimensions = useWindowDimensions();
 	const isLargeScreen = dimensions.width >= 768;
 
-	//const { colors } = useTheme();
+	const { colors } = useTheme();
 	//console.log(colors);
 
 
@@ -24,7 +25,7 @@ export default function MemberLayout() {
 					marginLeft: -20
 				},
 				drawerType: isLargeScreen ? 'permanent' : 'front',
-				headerLeft: isLargeScreen ? () => <></> : () => <DrawerToggleButton />,
+				headerLeft: isLargeScreen ? () => <></> : () => <DrawerToggleButton tintColor={colors.text} />,
 				// drawerActiveBackgroundColor: 'gray',
 				// drawerActiveTintColor: 'white',
 				// drawerInactiveTintColor: 'white'
