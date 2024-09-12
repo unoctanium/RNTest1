@@ -1,4 +1,4 @@
-import { View, StyleSheet } from 'react-native';
+import { Text, View, StyleSheet } from 'react-native';
 import { ThemedText } from '@/components/text';
 import { Link, Stack } from 'expo-router';
 
@@ -12,6 +12,7 @@ export default function NotFoundScreen() {
     <>
 
       <View style={styles.container}>
+        <Text style={{ color:colors.gray3 }}>Hi</Text>
         <ThemedText style={{ color: colors.primary}}>This screen doesn't exist.</ThemedText>
         <Link href="/" style={styles.link}>
           <ThemedText style={{ color: colors.gray3 }}>Go to home screen!</ThemedText>
